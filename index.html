@@ -62,9 +62,9 @@ function upgradeMPC() {
   if (marshmallowseliminated >= mpcCost) {
     marshmallowseliminated -= mpcCost;
     if(mpc<=7) mpc++; // Increase MPC
-    else if(mpc>7 && !mps>10) mpc=mpc+2;
-    else if(mps>10 && !mps>15) mps = mps+10;
-    else if(mps>15) mps=mps*2;
+    else if(mpc>7 && !mps>=10) mpc=mpc+2;
+    else if(mps>=10 && !mps>=15) mps = mps+10;
+    else if(mps>=15) mps=mps*2;
     mpcCost *= 2; // Increase cost for next upgrade
     updateDisplay();
   } else {
@@ -76,9 +76,9 @@ function buyMPS() {
   if (marshmallowseliminated >= mpsCost) {
     marshmallowseliminated -= mpsCost;
     if(mps<=7) mps++; // Increase MPS
-    else if(mps>7 && !mps>10) mps=mps+5;
-    else if(mps>10 && !mps>15) mps=mps+10;
-    else if(mps>15) mps=mps*2;
+    else if(mps>7 && !mps>=10) mps=mps+5;
+    else if(mps>=10 && !mps>=15) mps=mps+10;
+    else if(mps>=15) mps=mps*2;
     mpsCost *= 2; // Increase cost for next purchase
     // Automatically add marshmallowseliminated every second
     updateDisplay();
