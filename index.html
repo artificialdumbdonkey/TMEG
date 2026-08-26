@@ -62,9 +62,9 @@ function upgradeMPC() {
   if (marshmallowseliminated >= mpcCost) {
     marshmallowseliminated -= mpcCost;
     if(mpc<=7) mpc++; // Increase MPC
-    else if(mpc>7 && mps<10) mpc=mpc+2;
-    else if(mps>=10 && mps<15) mps = mps+10;
-    else if(mps>=15) mps=mps*2;
+    else if(mpc>7 && mpc<10) mpc=mpc+2;
+    else if(mpc>=10 && mpc<15) mpc = mpc+10;
+    else if(mpc>=15) mpc=mpc*2;
     mpcCost *= 2; // Increase cost for next upgrade
     updateDisplay();
   } else {
